@@ -42,6 +42,7 @@ public class List {
     public void addFirst(char chr) {
         Node temp = first;
         first = new Node(new CharData(chr), temp);
+        size++;
     }
     
     /** GIVE Textual representation of this list. */
@@ -80,12 +81,12 @@ public class List {
         //If not found, adds a new CharData the beginning of the list.
         if (search == -1) { 
             addFirst(chr);
-            size++;
         }
         //If found, increments the counter of the letter by 1.
         else { 
             ListIterator iterator = listIterator(search);
             iterator.current.cd.count++;
+            size++;
         }
     }
 
