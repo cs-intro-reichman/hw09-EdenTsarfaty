@@ -51,8 +51,9 @@ public class List {
         String output = "(";
         while (iterator.hasNext()) {
             output += iterator.next();
+            output += " ";
         }
-        return output + ")";
+        return output.substring(0, output.length() - 1) + ")";
     }
 
     /** Returns the index of the first CharData object in this list
